@@ -1,0 +1,5 @@
+SELECT Last_Name,Employe_id,Salary
+from employees
+WHERE Salary > (SELECT AVG(Salary)
+             from employees
+ORDER BY Salary ASC )  ;  
