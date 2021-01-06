@@ -1,0 +1,68 @@
+<?php
+$link = mysqli_connect("localhost", "root", "", "login_form");
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+$sql = "INSERT INTO users (id, username, password) VALUES ('1','demo','demo')";
+if(mysqli_query($link, $sql)){
+    echo "Records inserted successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+
+
+
+
+
+
+<?php
+
+$link = mysqli_connect("localhost", "root", "", "login_form");
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ 
+$sql =
+"CREATE TABLE Student (
+snum decimal(9,0) NOT NULL,
+sname varchar (30),
+major varchar (30),
+lavel varchar(2),
+age decimal (3,0) )
+
+)";
+if(mysqli_query($link, $sql)){
+    echo "Table created successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+mysqli_close($link);
+?>
+
+
+<?php
+
+$link = mysqli_connect("localhost", "root", "", "login_form");
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ 
+$sql =
+
+
+"CREATE TABLE Course
+(
+    snum decimal(9,0) NOT NULL,
+    cname varchar (30) NOT NULL,
+    PRIMARY KEY (snum,cname))
+");
+
+if(mysqli_query($link, $sql)){
+    echo "Table created successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+mysqli_close($link);
+?>
+
+
